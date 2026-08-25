@@ -233,6 +233,48 @@ section > p {
   overflow-wrap: anywhere;
 }
 
+.proto {
+  margin: 20px 0 8px;
+}
+
+.proto h4 {
+  margin: 0 0 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.proto-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.proto-grid-mobile {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.proto-grid figure {
+  margin: 0;
+  border: 1px solid var(--line);
+  padding: 8px;
+  background: #fff;
+}
+
+.proto-grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+}
+
+.proto-grid figcaption {
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
 .env {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -415,6 +457,9 @@ pre {
 
   .skill-grid { gap: 10px; }
   .skill-box { padding: 10px 12px; }
+  .proto-grid { grid-template-columns: 1fr 1fr; }
+  .proto-grid-mobile { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .proto-grid figure { break-inside: avoid; }
 }
 
 @media (max-width: 800px) {
@@ -450,5 +495,7 @@ pre {
   }
   .flow-arrow { padding-left: 0; }
   .skill-grid { grid-template-columns: 1fr; gap: 16px; }
+  .proto-grid,
+  .proto-grid-mobile { grid-template-columns: 1fr 1fr; }
   .meta { grid-template-columns: 56px 1fr; }
 }
